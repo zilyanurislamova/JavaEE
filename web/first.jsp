@@ -11,6 +11,13 @@
     <title>First JSP</title>
 </head>
 <body>
-
+    <h1>Testing JSP</h1>
+    <p>
+        <%
+            for (int i = 0; i < 10; i++) {
+                out.println("<p>" + "i = " + i + "</p>");
+            }
+        %>
+    </p>
 </body>
 </html>
