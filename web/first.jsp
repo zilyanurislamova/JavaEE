@@ -13,11 +13,11 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-        <%
-            for (int i = 0; i < 10; i++) {
-                out.println("<p>" + "i = " + i + "</p>");
-            }
-        %>
+        <%@ page import="java.util.Date, logic.MyClass" %>
+
+        <% MyClass myClass = new MyClass(); %>
+
+        <%= myClass.getMessage() %>
     </p>
 </body>
 </html>
