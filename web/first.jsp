@@ -11,14 +11,9 @@
     <title>First JSP</title>
 </head>
 <body>
-    <h1>Testing JSP</h1>
+    <h1>Testing redirect and forward</h1>
     <p>
-        <%
-            String name = request.getParameter("name");
-            String surname = request.getParameter("surname");
-        %>
-
-        <%= "Hello! I'm " + name + " " + surname + "!" %>
+        <%= "Redirected/forwarded from servlet to jsp" %>
     </p>
 </body>
 </html>
