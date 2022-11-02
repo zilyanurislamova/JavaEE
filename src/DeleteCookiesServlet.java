@@ -1,0 +1,19 @@
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+public class DeleteCookiesServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Cookie cookieToBeDeleted = new Cookie("first_cookie", "any_value");
+
+        cookieToBeDeleted.setMaxAge(0);
+
+        response.addCookie(cookieToBeDeleted);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}
